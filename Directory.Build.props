@@ -1,0 +1,16 @@
+﻿d<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    <PropertyGroup>
+        <Major>1</Major>
+        <Minor>0</Minor>
+        <Patch>1</Patch>
+        <Version>$(Major).$(Minor).$(Patch)</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Description>A library that helps to read only required bytes from a remote storage.</Description>
+        <Copyright>Copyright © Vladimir Karaichentsev $([System.DateTime]::Now.ToString('yyyy'))</Copyright>
+        <PackageId>$(AssemblyName)</PackageId>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+</Project>
