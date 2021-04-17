@@ -4,7 +4,7 @@
 
 ## A library that helps to read only required bytes from a remote storage.
 
-Extremely helpful in situations when you need only top 10 rows from a CSV file.
+Extremely helpful in situations when you need only top 10 rows from a zipped CSV file that is on a remote location such as AWS S3.
 
 Can be combined with `ZipArchive` or `GZipStream`.
 So you do not need to download full zip archive from a remote storage and then look into it.
