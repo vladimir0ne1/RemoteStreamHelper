@@ -27,7 +27,7 @@ using var s3Stream = new AwsS3ReadonlyStream(s3Client, amazonS3Uri, s3ObjectMeta
 using var cachedStream = new BufferedPagesReadonlyStream(s3Stream);
 ```
 
-## Next read from GZip
+### Next read from GZip
 
 ```c#
 using var gzipStream = new GZipStream(cachedStream, CompressionMode.Decompress);
@@ -36,7 +36,7 @@ Console.WriteLine(reader.ReadLine());
 Console.WriteLine(reader.ReadLine());
 ```
 
-## Or read from Zip
+### Or read from Zip
 ```c#
 using var zip = new ZipArchive(cachedStream);
 
@@ -50,5 +50,5 @@ foreach (var zipEntry in zip.Entries)
 }
 ```
 
-# License
+## License
 `Remote stream helper` is Open Source software and is released under the MIT license. This license allows the use of `Remote stream helper` in free and commercial applications and libraries without restrictions.
