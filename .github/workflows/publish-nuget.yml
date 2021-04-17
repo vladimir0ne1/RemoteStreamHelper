@@ -1,4 +1,4 @@
-name: .NET
+name: Publish nuget package
 
 on:
   push:
@@ -20,6 +20,6 @@ jobs:
     - name: Build
       run: dotnet build
     - name: Pack nuget package
-      run: dotnet pack
+      run: dotnet pack --output nupkgs
     - name: Push nuget package
-      run: dotnet nuget push "*.nupkg" -k ${{secrets.NUGET_API_KEY}}  -s "https://www.nuget.org/"
+      run: dotnet nuget push "**/nupkgs/*.nupkg" -k ${{secrets.NUGET_API_KEY}}  -s "https://www.nuget.org/"
