@@ -1,4 +1,8 @@
-# A library that helps to read only required bytes from a remote storage.
+# RemoteStreamHelper #
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vladimir0ne1_RemoteStreamHelper&metric=alert_status)](https://sonarcloud.io/dashboard?id=vladimir0ne1_RemoteStreamHelper)
+
+## A library that helps to read only required bytes from a remote storage.
 
 Extremely helpful in situations when you need only top 10 rows from a CSV file.
 
@@ -8,9 +12,9 @@ Instead you can read only structure and see what inside without fetching full ar
 
 Currently supports only AWS S3.
 
-# Usage examples
+## Usage examples
 
-## First init buffered AWS S3 stream reader
+### First init buffered AWS S3 stream reader
 
 ```c#
 const string s3Path = "https://your-bucket.s3.amazonaws.com/big-data-file.zip";
@@ -23,7 +27,7 @@ using var s3Stream = new AwsS3ReadonlyStream(s3Client, amazonS3Uri, s3ObjectMeta
 using var cachedStream = new BufferedPagesReadonlyStream(s3Stream);
 ```
 
-## #2 Read from GZip
+## Next read from GZip
 
 ```c#
 using var gzipStream = new GZipStream(cachedStream, CompressionMode.Decompress);
@@ -32,7 +36,7 @@ Console.WriteLine(reader.ReadLine());
 Console.WriteLine(reader.ReadLine());
 ```
 
-## Read from Zip
+## Or read from Zip
 ```c#
 using var zip = new ZipArchive(cachedStream);
 
@@ -45,5 +49,6 @@ foreach (var zipEntry in zip.Entries)
     Console.WriteLine(reader.ReadLine());
 }
 ```
+
 # License
 `Remote stream helper` is Open Source software and is released under the MIT license. This license allows the use of `Remote stream helper` in free and commercial applications and libraries without restrictions.
