@@ -19,8 +19,7 @@ jobs:
         dotnet-version: 5.0.x
     - name: Build
       run: dotnet build
-    - name: Publish nuget package
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-        PROJECT_FILE_PATH: RemoteStreamHelper/RemoteStreamHelper.csproj
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
+    - name: Pack nuget package
+      run: dotnet pack
+    - name: Push nuget package
+      run: dotnet nuget push "*.nupkg" -k ${{secrets.NUGET_API_KEY}}  -s "https://www.nuget.org/"
