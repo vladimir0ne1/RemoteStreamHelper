@@ -1,6 +1,7 @@
 # RemoteStreamHelper #
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vladimir0ne1_RemoteStreamHelper&metric=alert_status)](https://sonarcloud.io/dashboard?id=vladimir0ne1_RemoteStreamHelper)
+[![NuGet  Version and Downloads count](https://buildstats.info/nuget/RemoteStreamHelper)](https://www.nuget.org/packages/RemoteStreamHelper)
 
 ## A library that helps to read only required bytes from a remote storage.
 
