@@ -3,14 +3,23 @@
     <PropertyGroup>
         <Major>1</Major>
         <Minor>0</Minor>
-        <Patch>2</Patch>
+        <Patch>3</Patch>
         <Version>$(Major).$(Minor).$(Patch)</Version>
         <AssemblyVersion>$(Version)</AssemblyVersion>
         <FileVersion>$(Version)</FileVersion>
         <NeutralLanguage>en</NeutralLanguage>
         <Description>A library that helps to read only required bytes from a remote storage.</Description>
         <Copyright>Copyright © Vladimir Karaichentsev $([System.DateTime]::Now.ToString('yyyy'))</Copyright>
+
+        <!-- NuGet -->
         <PackageId>$(AssemblyName)</PackageId>
+        <PackageTags>remotestream;awss3stream;s3stream</PackageTags>
+        <PackageProjectUrl>https://github.com/vladimir0ne1/RemoteStreamHelper/</PackageProjectUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryUrl>https://github.com/vladimir0ne1/RemoteStreamHelper/</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
     </PropertyGroup>
 </Project>
