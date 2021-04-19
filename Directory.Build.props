@@ -3,7 +3,7 @@
     <PropertyGroup>
         <Major>1</Major>
         <Minor>0</Minor>
-        <Patch>1</Patch>
+        <Patch>2</Patch>
         <Version>$(Major).$(Minor).$(Patch)</Version>
         <AssemblyVersion>$(Version)</AssemblyVersion>
         <FileVersion>$(Version)</FileVersion>
